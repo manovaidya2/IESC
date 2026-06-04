@@ -12,7 +12,7 @@ import {
   ShieldCheck,
   ArrowRight,
 } from "lucide-react";
-import careerImg from "../images/certificate.png";
+import careerImg from "../images/Certificate.png";
 
 export default function CertificationJourneySection() {
   const journey = [

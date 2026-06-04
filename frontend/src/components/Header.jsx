@@ -31,7 +31,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="h-[68px] bg-[#02070c] border-b border-[#0f151a] text-white flex items-center px-4 md:px-[28px] relative z-50">
+      <header className="sticky top-0 h-[68px] bg-[#02070c] border-b border-[#0f151a] text-white flex items-center px-4 md:px-[28px] z-50">
         <div className="w-[230px] lg:w-[290px] flex items-center">
           <NavLink to="/" className="flex items-center gap-3">
             <img

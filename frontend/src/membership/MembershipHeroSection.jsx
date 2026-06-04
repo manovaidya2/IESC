@@ -38,7 +38,7 @@ export default function MembershipHeroSection() {
 
   return (
     <section
-      className="relative min-h-[520px] overflow-hidden bg-cover bg-center text-white"
+      className="relative min-h-[600px] sm:min-h-[560px] lg:min-h-[520px] overflow-hidden bg-cover bg-center text-white"
       style={{
         backgroundImage: `linear-gradient(
           90deg,
@@ -51,35 +51,35 @@ export default function MembershipHeroSection() {
     >
       <div className="absolute inset-0 bg-black/10" />
 
-      <div className="relative z-10      mx-auto px-6 lg:px-10 pt-[48px]">
+      <div className="relative z-10 mx-auto px-5 sm:px-6 lg:px-10 pt-[34px] sm:pt-[42px] lg:pt-[48px] pb-8 lg:pb-0">
         <div className="max-w-[570px]">
-          <div className="flex items-center gap-2 text-[12px] font-bold text-white/85 mb-7">
+          <div className="flex items-center flex-wrap gap-2 text-[11px] sm:text-[12px] font-bold text-white/85 mb-5 sm:mb-7">
             <span>Home</span>
             <ChevronRight size={13} />
             <span className="text-[#ed1c1c]">Membership</span>
             <span>Programs</span>
           </div>
 
-          <h1 className="text-[44px] md:text-[47px] leading-[1.15] font-bold font-black tracking-[0.2px] mb-5">
+          <h1 className="text-[34px] sm:text-[40px] md:text-[47px] leading-[1.15] font-bold font-black tracking-[0.2px] mb-5">
             Engineering Membership <br />
             Programs
           </h1>
 
           <div className="w-[70px] h-[3px] bg-[#ed1c1c] mb-6" />
 
-          <p className="max-w-[560px] text-[16px] leading-[1.75] text-[#e1e6e9] font-semibold mb-8">
+          <p className="max-w-[560px] text-[14px] sm:text-[16px] leading-[1.75] text-[#e1e6e9] font-semibold mb-7 sm:mb-8">
             Join a global community of engineers and technical professionals.
             Gain recognition, credibility and career advancement with IESC
             membership pathways.
           </p>
 
-          <div className="flex flex-wrap gap-4">
-            <button className="h-[42px] px-6 bg-[#ed1c1c] border-2  font-semibold border-[#ed1c1c] text-white text-[12px] font-black uppercase flex items-center gap-3">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4">
+            <button className="h-[42px] w-full sm:w-auto px-6 bg-[#ed1c1c] border-2 font-semibold border-[#ed1c1c] text-white text-[12px] font-black uppercase flex items-center justify-center gap-3">
               <Download size={17} />
               Membership Guide
             </button>
 
-            <button className="h-[42px] px-6 bg-black/25 border-2 border-white/45 font-semibold text-white text-[12px] font-black uppercase flex items-center gap-3">
+            <button className="h-[42px] w-full sm:w-auto px-6 bg-black/25 border-2 border-white/45 font-semibold text-white text-[12px] font-black uppercase flex items-center justify-center gap-3">
               <GitCompare size={17} />
               Compare Memberships
             </button>
@@ -93,7 +93,7 @@ export default function MembershipHeroSection() {
             return (
               <div
                 key={item.value}
-                className="relative flex items-center gap-6 px-8 py-6"
+                className="relative flex items-center gap-5 sm:gap-6 px-5 sm:px-8 py-5 sm:py-6 border-b sm:border-b-0 border-white/10"
               >
                 <Icon
                   size={38}
@@ -102,11 +102,11 @@ export default function MembershipHeroSection() {
                 />
 
                 <div>
-                  <h3 className="text-[24px]  font-semibold leading-none font-black">
+                  <h3 className="text-[20px] sm:text-[24px] font-semibold leading-none font-black">
                     {item.value}
                   </h3>
 
-                  <p className="mt-2 text-[13px]  font-semibold font-black text-[#e1e6e9]">
+                  <p className="mt-2 text-[12px] sm:text-[13px] font-semibold font-black text-[#e1e6e9]">
                     {item.label}
                   </p>
                 </div>

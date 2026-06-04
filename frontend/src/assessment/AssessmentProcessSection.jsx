@@ -138,7 +138,7 @@ export default function AssessmentProcessSection() {
 
         {/* Stats Bar */}
         <div className="rounded-[6px] overflow-hidden bg-[#020b10]">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="grid grid-cols-2 lg:grid-cols-5">
             {stats.map((item, index) => {
               const Icon = item.icon;
 

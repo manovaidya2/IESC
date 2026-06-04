@@ -5,24 +5,23 @@ import resourcesHero from "../images/reso.png";
 export default function ResourcesHeroSection() {
   return (
     <section
-  className="relative overflow-hidden bg-center bg-no-repeat text-white"
-  style={{
-    backgroundImage: `
-      linear-gradient(
-        90deg,
-        rgba(1,8,13,.98) 0%,
-        rgba(1,8,13,.88) 32%,
-        rgba(1,8,13,.42) 58%,
-        rgba(1,8,13,.15) 100%
-      ),
-      url(${resourcesHero})
-    `,
-    backgroundSize: "110%", // 100% = normal, 110-120% adjust karo
-  }}
->
+      className="relative overflow-hidden bg-cover sm:bg-[length:110%] bg-center bg-no-repeat text-white"
+      style={{
+        backgroundImage: `
+          linear-gradient(
+            90deg,
+            rgba(1,8,13,.98) 0%,
+            rgba(1,8,13,.88) 32%,
+            rgba(1,8,13,.42) 58%,
+            rgba(1,8,13,.15) 100%
+          ),
+          url(${resourcesHero})
+        `,
+      }}
+    >
       <div className="absolute inset-0 bg-black/10" />
 
-      <div className="relative z-10  mx-auto px-5 lg:px-10 py-[36px]">
+      <div className="relative z-10 mx-auto px-4 sm:px-5 lg:px-10 py-[36px]">
         <div className="max-w-[620px]">
           <div className="flex items-center gap-2 text-[12px] font-semibold text-white/85 mb-7">
             <span>Home</span>

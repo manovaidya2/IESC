@@ -37,24 +37,24 @@ export default function MembershipLevelSection() {
   ];
 
   return (
-    <section className="bg-[#f7f7f5] py-10 px-20">
-      <div className=" mx-auto">
+    <section className="bg-[#f7f7f5] py-10 px-4 sm:px-6 lg:px-20">
+      <div className="mx-auto max-w-[1440px]">
         <div className="text-center mb-5">
           <div className="mx-auto mb-1 h-[3px] w-[42px] bg-[#ff2a2a]" />
-          <h2 className="text-[24px] font-black text-[#111] mt-3 mb-5">
+          <h2 className="text-[22px] sm:text-[24px] font-black text-[#111] mt-3 mb-5">
             Choose Your Membership Level
           </h2>
           <div className="mx-auto mt-1 h-[3px] w-[42px] bg-[#ff2a2a]" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-3">
           {cards.map((card) => {
             const Icon = card.icon;
 
             return (
               <div
                 key={card.title}
-                className={`relative min-h-[315px] rounded-[3px] px-7 py-6 text-center shadow-[0_4px_18px_rgba(0,0,0,.12)] border overflow-hidden ${
+                className={`relative min-h-[315px] rounded-[3px] px-5 py-5 sm:px-7 sm:py-6 text-center shadow-[0_4px_18px_rgba(0,0,0,.12)] border overflow-hidden ${
                   card.active
                     ? "bg-[#061015] text-white border-[#061015] scale-[1.02]"
                     : "bg-white text-[#111] border-[#eeeeee]"

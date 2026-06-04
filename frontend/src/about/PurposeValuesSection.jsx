@@ -65,22 +65,22 @@ export default function PurposeValuesSection() {
   ];
 
   return (
-    <section className="bg-white text-[#111]">
+    <section className="bg-white text-[#111] overflow-hidden">
       {/* Our Purpose */}
-      <div className="mx-auto px-6 lg:px-[50px] py-[48px]">
-        <div className="grid lg:grid-cols-2 gap-10 mb-12">
+      <div className="mx-auto px-5 sm:px-6 lg:px-[50px] py-[38px] sm:py-[48px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 mb-10 lg:mb-12">
           <div>
-            <p className="text-[#ed1c1c] text-[12px]  font-bold font-black uppercase mb-3">
+            <p className="text-[#ed1c1c] text-[12px] font-bold font-black uppercase mb-3">
               OUR PURPOSE
             </p>
 
-            <h2 className="text-[32px] md:text-[38px] leading-[1.18] font-semibold">
+            <h2 className="text-[26px] sm:text-[32px] md:text-[38px] leading-[1.18] font-semibold">
               Engineering Standards <br />
               That Build a Better Tomorrow
             </h2>
           </div>
 
-          <p className="text-[14px] leading-[1.75] font-medium text-[#222] max-w-[620px] pt-7">
+          <p className="text-[13px] sm:text-[14px] leading-[1.75] font-medium text-[#222] max-w-[620px] pt-0 lg:pt-7">
             We develop and govern internationally accepted engineering standards
             and competency frameworks that support professionals, organizations,
             and industries in achieving excellence, innovation, and sustainable
@@ -88,14 +88,14 @@ export default function PurposeValuesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-y-8 sm:gap-y-10 lg:gap-y-0">
           {purposes.map((item, index) => {
             const Icon = item.icon;
 
             return (
               <div
                 key={item.title}
-                className={`pr-8 ${
+                className={`pr-0 sm:pr-8 border-b sm:border-b-0 border-[#dddddd] pb-6 sm:pb-0 ${
                   index !== purposes.length - 1
                     ? "lg:border-r border-[#dddddd]"
                     : ""
@@ -107,11 +107,11 @@ export default function PurposeValuesSection() {
                   className="text-[#ff2a2a] mb-3"
                 />
 
-                <h3 className="text-[15px]  font-bold font-black mb-2">
+                <h3 className="text-[15px] font-bold font-black mb-2">
                   {item.title}
                 </h3>
 
-                <p className="text-[12px] leading-[1.75] font-medium text-[#333] max-w-[150px]">
+                <p className="text-[12px] leading-[1.75] font-medium text-[#333] max-w-full lg:max-w-[150px]">
                   {item.text}
                 </p>
               </div>
@@ -122,18 +122,18 @@ export default function PurposeValuesSection() {
 
       {/* Our Values */}
       <div className="bg-[#f3f3f2]">
-        <div className=" mx-auto px-6 lg:px-[50px] py-[34px] grid lg:grid-cols-[1.1fr_.9fr] gap-12 items-center">
+        <div className="mx-auto px-5 sm:px-6 lg:px-[50px] py-[36px] lg:py-[34px] grid grid-cols-1 lg:grid-cols-[1.1fr_.9fr] gap-10 lg:gap-12 items-center">
           <div>
-            <p className="text-[#ed1c1c] text-[12px]  font-bold font-black uppercase mb-6">
+            <p className="text-[#ed1c1c] text-[12px] font-bold font-black uppercase mb-6">
               OUR VALUES
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-x-16 gap-y-9">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-8 lg:gap-y-9">
               {values.map((item) => {
                 const Icon = item.icon;
 
                 return (
-                  <div key={item.title} className="flex gap-5">
+                  <div key={item.title} className="flex gap-4 sm:gap-5">
                     <Icon
                       size={28}
                       strokeWidth={1.35}
@@ -145,7 +145,7 @@ export default function PurposeValuesSection() {
                         {item.title}
                       </h3>
 
-                      <p className="text-[12px] leading-[1.65] font-medium text-[#333] max-w-[310px]">
+                      <p className="text-[12px] leading-[1.65] font-medium text-[#333] max-w-full sm:max-w-[310px]">
                         {item.text}
                       </p>
                     </div>
@@ -155,7 +155,7 @@ export default function PurposeValuesSection() {
             </div>
           </div>
 
-          <div className="bg-[#020b10] min-h-[220px] p-10 flex flex-col justify-center relative overflow-hidden">
+          <div className="bg-[#020b10] min-h-[220px] p-6 sm:p-10 flex flex-col justify-center relative overflow-hidden">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_100%_50%,rgba(255,255,255,.12),transparent_35%)]" />
 
             <Quote
@@ -164,7 +164,7 @@ export default function PurposeValuesSection() {
               fill="#ed1c1c"
             />
 
-            <p className="relative z-10 text-white text-[17px] leading-[1.65] font-medium max-w-[480px]">
+            <p className="relative z-10 text-white text-[14px] sm:text-[17px] leading-[1.65] font-medium max-w-[480px]">
               Our vision is to be the most trusted global engineering standards
               and certification council, recognized for shaping competent
               professionals and advancing the engineering profession for a

@@ -52,10 +52,10 @@ export default function MembershipPathway() {
   ];
 
   return (
-    <section className="bg-[#f6f6f4] text-[#111]">
+    <section className="bg-[#f6f6f4] text-[#111] overflow-hidden">
       <div className="mx-auto px-5 lg:px-10 pt-4 pb-8 py-[40px] md:py-[50px]">
         <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-8 lg:gap-[75px] items-start">
-          <div className="h-[260px] sm:h-[320px] lg:h-[365px] w-full overflow-hidden shadow-sm">
+          <div className="h-[220px] sm:h-[320px] lg:h-[365px] w-full overflow-hidden shadow-sm">
             <img
               src={membershipImg}
               alt="Engineering membership"
@@ -68,12 +68,13 @@ export default function MembershipPathway() {
               MEMBERSHIP PATHWAY
             </p>
 
-            <h2 className="text-[26px] sm:text-[30px] md:text-[34px] leading-[1.18] font-semibold tracking-[0.3px] max-w-[650px] mb-7 lg:mb-8">
-              Advance Your Engineering Career <br className="hidden sm:block" />
+            <h2 className="text-[25px] sm:text-[30px] md:text-[34px] leading-[1.18] font-semibold tracking-[0.3px] max-w-[650px] mb-7 lg:mb-8">
+              Advance Your Engineering Career{" "}
+              <br className="hidden sm:block" />
               With Professional Recognition
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-5 items-start">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-5 items-start">
               {steps.map((item, index) => {
                 const Icon = item.icon;
 
@@ -108,7 +109,7 @@ export default function MembershipPathway() {
               })}
             </div>
 
-            <button className="mt-8 lg:mt-12 h-[46px] w-full sm:w-[335px] font-black border-2 border-[#ff6b6b] text-[#ed1c1c] bg-transparent text-[12px] uppercase tracking-[0.4px] flex items-center justify-center gap-8 sm:gap-12">
+            <button className="mt-8 lg:mt-12 h-[46px] w-full sm:w-[335px] font-black border-2 border-[#ff6b6b] text-[#ed1c1c] bg-transparent text-[12px] uppercase tracking-[0.4px] flex items-center justify-center gap-6 sm:gap-12">
               View All Membership Programs
               <ArrowRight size={17} />
             </button>
@@ -121,11 +122,11 @@ export default function MembershipPathway() {
           Trusted By Industry Leaders Worldwide
         </h3>
 
-        <div className="max-w-[1120px] mx-auto px-5 flex flex-wrap items-center justify-center gap-x-8 sm:gap-x-11 gap-y-5">
+        <div className="max-w-[1120px] mx-auto px-5 flex flex-wrap items-center justify-center gap-x-7 sm:gap-x-11 gap-y-5">
           {logos.map((logo) => (
             <div
               key={logo}
-              className="whitespace-pre-line text-center text-[17px] sm:text-[22px] leading-[0.95] font-black text-[#111] opacity-75 grayscale"
+              className="whitespace-pre-line text-center text-[16px] sm:text-[22px] leading-[0.95] font-black text-[#111] opacity-75 grayscale"
             >
               {logo}
             </div>

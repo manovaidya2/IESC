@@ -47,8 +47,8 @@ export default function EngineeringDisciplines() {
     },
     {
       icon: ShieldCheck,
-      title: "Quality &\nReliability",
-      img: "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=600&auto=format&fit=crop",
+      title: "Computer Science &\nEngineering",
+      img: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=600&auto=format&fit=crop",
     },
     {
       icon: UserCog,

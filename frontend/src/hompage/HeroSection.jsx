@@ -10,6 +10,12 @@ import {
 import img1 from "../images/hero.png";
 
 export default function HeroSection() {
+  const scrollToPrograms = () => {
+    document
+      .getElementById("engineering-disciplines")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   const stats = [
     { icon: Globe2, value: "45+", label: "Countries" },
     { icon: UserRound, value: "18,500+", label: "Certified Professionals" },
@@ -75,7 +81,11 @@ export default function HeroSection() {
 
           <div className="mt-6 md:mt-[28px] flex flex-col sm:flex-row gap-4 md:gap-[22px] justify-center lg:justify-start">
 
-            <button className="h-[42px] md:h-[48px] px-5 md:px-[26px] bg-[#ed1c1c] border-2 border-[#ed1c1c] text-white text-[11px] md:text-[12px] font-black tracking-[0.4px] uppercase flex items-center justify-center gap-3 md:gap-[15px] hover:bg-[#ed1c1c]/80 transition-all">
+            <button
+              type="button"
+              onClick={scrollToPrograms}
+              className="h-[42px] md:h-[48px] px-5 md:px-[26px] bg-[#ed1c1c] border-2 border-[#ed1c1c] text-white text-[11px] md:text-[12px] font-black tracking-[0.4px] uppercase flex items-center justify-center gap-3 md:gap-[15px] hover:bg-[#ed1c1c]/80 transition-all"
+            >
               EXPLORE PROGRAMS
               <ArrowRight size={16} />
             </button>

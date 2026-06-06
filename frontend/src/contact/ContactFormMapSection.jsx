@@ -4,7 +4,10 @@ import partnerBg from "../images/whatimg.png";
 
 export default function ContactFormMapSection() {
   return (
-    <section className="bg-[#f8f8f7] px-5 lg:px-10 py-[34px] text-[#111]">
+    <section
+      id="contact-message"
+      className="scroll-mt-20 bg-[#f8f8f7] px-5 lg:px-10 py-[34px] text-[#111]"
+    >
       <div className="max-w-[1240px] mx-auto grid lg:grid-cols-[1fr_1.4fr] gap-6">
         
         {/* Left Form */}

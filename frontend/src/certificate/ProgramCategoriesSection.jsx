@@ -96,7 +96,10 @@ export default function ProgramCategoriesSection() {
   ];
 
   return (
-    <section className="bg-[#f7f7f5] py-10 px-5 text-[#111]">
+    <section
+      id="program-categories"
+      className="scroll-mt-20 bg-[#f7f7f5] py-10 px-5 text-[#111]"
+    >
       <div className=" mx-auto grid lg:grid-cols-[180px_1fr] gap-6">
         <aside>
           <h3 className="text-[#ed1c1c] text-[14px]  font-bold font-black uppercase mb-4">

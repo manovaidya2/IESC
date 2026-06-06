@@ -2,6 +2,7 @@ import React from "react";
 import ContactHeroSection from "../contact/ContactHeroSection";
 import GetInTouchSection from "../contact/GetInTouchSection";
 import ContactFormMapSection from "../contact/ContactFormMapSection";
+import ContactFAQSection from "../contact/ContactFAQSection";
 
 
 function Contact() {
@@ -10,6 +11,7 @@ function Contact() {
 <ContactHeroSection />
 <GetInTouchSection />
 <ContactFormMapSection />
+<ContactFAQSection />
      
     </>
   );

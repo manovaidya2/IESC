@@ -37,7 +37,10 @@ export default function MembershipLevelSection() {
   ];
 
   return (
-    <section className="bg-[#f7f7f5] py-10 px-4 sm:px-6 lg:px-20">
+    <section
+      id="membership-levels"
+      className="scroll-mt-20 bg-[#f7f7f5] py-10 px-4 sm:px-6 lg:px-20"
+    >
       <div className="mx-auto max-w-[1440px]">
         <div className="text-center mb-5">
           <div className="mx-auto mb-1 h-[3px] w-[42px] bg-[#ff2a2a]" />

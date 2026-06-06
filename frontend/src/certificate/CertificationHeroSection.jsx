@@ -3,6 +3,12 @@ import { ChevronRight, ArrowRight } from "lucide-react";
 import certificationHero from "../images/hero.png";
 
 export default function CertificationHeroSection() {
+  const scrollToSection = (sectionId) => {
+    document
+      .getElementById(sectionId)
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <section
       className="relative min-h-[405px] overflow-hidden bg-cover bg-center text-white"
@@ -43,12 +49,20 @@ export default function CertificationHeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row flex-wrap gap-3">
-            <button className="w-full sm:w-auto h-[46px] px-7 bg-[#ed1c1c] border-2 border-[#ed1c1c] font-bold text-white text-[13px] font-black rounded-[3px] flex items-center justify-center gap-2">
+            <button
+              type="button"
+              onClick={() => scrollToSection("program-categories")}
+              className="w-full sm:w-auto h-[46px] px-7 bg-[#ed1c1c] border-2 border-[#ed1c1c] font-bold text-white text-[13px] font-black rounded-[3px] flex items-center justify-center gap-2"
+            >
               Explore All Programs
               <ArrowRight size={17} />
             </button>
 
-            <button className="w-full sm:w-auto h-[46px] px-7 bg-black/20 border-2 font-bold border-white/40 text-white text-[13px] font-black rounded-[3px] flex items-center justify-center gap-2">
+            <button
+              type="button"
+              onClick={() => scrollToSection("certification-journey")}
+              className="w-full sm:w-auto h-[46px] px-7 bg-black/20 border-2 font-bold border-white/40 text-white text-[13px] font-black rounded-[3px] flex items-center justify-center gap-2"
+            >
               Certification Pathways
               <ArrowRight size={17} />
             </button>
@@ -58,3 +72,4 @@ export default function CertificationHeroSection() {
     </section>
   );
 }
+

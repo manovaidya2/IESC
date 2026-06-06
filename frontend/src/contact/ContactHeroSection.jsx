@@ -9,6 +9,12 @@ import {
 import contactHero from "../images/contacts.png";
 
 export default function ContactHeroSection() {
+  const scrollToSection = (sectionId) => {
+    document
+      .getElementById(sectionId)
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   const supportItems = [
     "General Inquiries",
     "Membership & Certification Support",
@@ -63,12 +69,20 @@ export default function ContactHeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="h-[42px] px-5 bg-[#ff1f1f] border border-[#ff1f1f] font-bold text-white text-[14px] font-black rounded-[4px] flex items-center justify-center gap-5">
+              <button
+                type="button"
+                onClick={() => scrollToSection("contact-message")}
+                className="h-[42px] px-5 bg-[#ff1f1f] border border-[#ff1f1f] font-bold text-white text-[14px] font-black rounded-[4px] flex items-center justify-center gap-5"
+              >
                 Send Us a Message
                 <ArrowRight size={18} />
               </button>
 
-              <button className="h-[42px] px-7 bg-black/15 backdrop-blur-sm border border-white/30 font-bold text-white text-[14px] font-black rounded-[4px] flex items-center justify-center gap-4">
+              <button
+                type="button"
+                onClick={() => scrollToSection("contact-faqs")}
+                className="h-[42px] px-7 bg-black/15 backdrop-blur-sm border border-white/30 font-bold text-white text-[14px] font-black rounded-[4px] flex items-center justify-center gap-4"
+              >
                 Explore FAQs
                 <HelpCircle size={17} />
               </button>

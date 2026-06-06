@@ -82,7 +82,10 @@ export default function AssessmentProcessSection() {
   ];
 
   return (
-    <section className="bg-white py-10 px-5 lg:px-10">
+    <section
+      id="assessment-process"
+      className="scroll-mt-20 bg-white py-10 px-5 lg:px-10"
+    >
       <div className=" mx-auto">
         {/* Heading */}
         <div className="mb-10">

@@ -3,6 +3,12 @@ import { ChevronRight, ArrowRight, Mail } from "lucide-react";
 import resourcesHero from "../images/reso.png";
 
 export default function ResourcesHeroSection() {
+  const scrollToFeaturedResources = () => {
+    document
+      .getElementById("featured-resources")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <section
       className="relative overflow-hidden bg-cover sm:bg-[length:110%] bg-center bg-no-repeat text-white"
@@ -42,15 +48,22 @@ export default function ResourcesHeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="h-[46px] px-6 bg-[#ed1c1c] border-2 border-[#ed1c1c] font-bold text-white text-[14px] font-black rounded-[3px] flex items-center justify-center gap-5">
+            <button
+              type="button"
+              onClick={scrollToFeaturedResources}
+              className="h-[46px] px-6 bg-[#ed1c1c] border-2 border-[#ed1c1c] font-bold text-white text-[14px] font-black rounded-[3px] flex items-center justify-center gap-5"
+            >
               Browse Resource Library
               <ArrowRight size={17} />
             </button>
 
-            <button className="h-[46px] px-6 bg-black/20 border-2 border-white/40 text-white text-[14px] font-bold font-black rounded-[3px] flex items-center justify-center gap-5">
+            <a
+              href="mailto:info@iesc.org?subject=Subscribe%20to%20IESC%20updates"
+              className="h-[46px] px-6 bg-black/20 border-2 border-white/40 text-white text-[14px] font-bold font-black rounded-[3px] flex items-center justify-center gap-5"
+            >
               Subscribe to Updates
               <Mail size={17} />
-            </button>
+            </a>
           </div>
         </div>
       </div>

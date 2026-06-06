@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Mail, Phone, ArrowRight } from "lucide-react";
 import {
   FaLinkedinIn,
@@ -9,29 +10,29 @@ import iescLogo from "../images/logo.png";
 
 export default function Footer() {
   const quickLinks = [
-    "About IESC",
-    "Membership",
-    "Certifications",
-    "Assessments",
-    "Standards",
-    "Resources",
-    "Contact",
+    { label: "About IESC", path: "/about" },
+    { label: "Membership", path: "/membership" },
+    { label: "Certifications", path: "/certifications" },
+    { label: "Assessments", path: "/assessments" },
+    { label: "Standards", path: "/standards" },
+    { label: "Resources", path: "/resources" },
+    { label: "Contact", path: "/contact" },
   ];
 
   const programs = [
-    "Engineering Memberships",
-    "Certification Programs",
-    "Industrial Assessments",
-    "Practical Assessments",
-    "LMS Portal",
+    { label: "Engineering Memberships", path: "/membership" },
+    { label: "Certification Programs", path: "/certifications" },
+    { label: "Industrial Assessments", path: "/assessments" },
+    { label: "Practical Assessments", path: "/assessments" },
+    { label: "LMS Portal", path: "/resources" },
   ];
 
   const resources = [
-    "Engineering Standards",
-    "Technical Articles",
-    "Guidelines & Frameworks",
-    "Research & Innovation",
-    "News & Updates",
+    { label: "Engineering Standards", path: "/standards" },
+    { label: "Technical Articles", path: "/resources" },
+    { label: "Guidelines & Frameworks", path: "/resources" },
+    { label: "Research & Innovation", path: "/resources" },
+    { label: "News & Updates", path: "/resources" },
   ];
 
   return (
@@ -131,10 +132,13 @@ export default function Footer() {
               </div>
             </div>
 
-            <button className="text-[#ed1c1c] text-[13px] font-black uppercase flex items-center gap-2 hover:gap-3 transition-all duration-300">
+            <Link
+              to="/contact"
+              className="text-[#ed1c1c] text-[13px] font-black uppercase flex items-center gap-2 hover:gap-3 transition-all duration-300"
+            >
               Contact Us
               <ArrowRight size={16} />
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -146,21 +150,30 @@ export default function Footer() {
           </p>
 
           <div className="flex flex-wrap justify-center items-center gap-4 text-[12px] text-[#cfd5d8]">
-            <span className="hover:text-[#ed1c1c] cursor-pointer transition">
+            <Link
+              to="/resources"
+              className="hover:text-[#ed1c1c] cursor-pointer transition"
+            >
               Privacy Policy
-            </span>
+            </Link>
 
             <span>|</span>
 
-            <span className="hover:text-[#ed1c1c] cursor-pointer transition">
+            <Link
+              to="/resources"
+              className="hover:text-[#ed1c1c] cursor-pointer transition"
+            >
               Terms & Conditions
-            </span>
+            </Link>
 
             <span>|</span>
 
-            <span className="hover:text-[#ed1c1c] cursor-pointer transition">
+            <Link
+              to="/resources"
+              className="hover:text-[#ed1c1c] cursor-pointer transition"
+            >
               Cookie Policy
-            </span>
+            </Link>
           </div>
         </div>
       </div>
@@ -177,11 +190,13 @@ function FooterCol({ title, items }) {
 
       <ul className="space-y-3">
         {items.map((item) => (
-          <li
-            key={item}
-            className="text-[12px] text-[#d8dee1] font-semibold hover:text-[#ed1c1c] cursor-pointer transition-all duration-300"
-          >
-            {item}
+          <li key={item.label}>
+            <Link
+              to={item.path}
+              className="text-[12px] text-[#d8dee1] font-semibold hover:text-[#ed1c1c] cursor-pointer transition-all duration-300"
+            >
+              {item.label}
+            </Link>
           </li>
         ))}
       </ul>

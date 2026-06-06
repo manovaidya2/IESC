@@ -44,7 +44,10 @@ export default function StandardsFrameworkSection() {
   ];
 
   return (
-    <section className="bg-white px-5 lg:px-10 py-8">
+    <section
+      id="standards-framework"
+      className="scroll-mt-20 bg-white px-5 lg:px-10 py-8"
+    >
       <div className="max-w-[1380px] mx-auto bg-[#f3f3f2] rounded-[6px] px-6 py-8">
         <div className="grid lg:grid-cols-[310px_1fr] gap-10 items-center">
           

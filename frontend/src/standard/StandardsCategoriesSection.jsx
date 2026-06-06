@@ -56,7 +56,10 @@ export default function StandardsCategoriesSection() {
   ];
 
   return (
-    <section className="bg-[#f8f8f7] text-[#111] px-4 sm:px-5 lg:px-10 py-[36px] mt-[75px]">
+    <section
+      id="standards-categories"
+      className="scroll-mt-20 bg-[#f8f8f7] text-[#111] px-4 sm:px-5 lg:px-10 py-[36px] mt-[75px]"
+    >
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-8 lg:gap-10">
         {/* Left Content */}
         <div className="pt-1">

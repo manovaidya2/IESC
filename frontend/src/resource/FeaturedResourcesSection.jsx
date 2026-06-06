@@ -50,7 +50,10 @@ export default function FeaturedResourcesSection() {
   ];
 
   return (
-    <section className="bg-white text-[#111] px-5 lg:px-10 py-[30px]">
+    <section
+      id="featured-resources"
+      className="scroll-mt-20 bg-white text-[#111] px-5 lg:px-10 py-[30px]"
+    >
       <div className="max-w-[1380px] mx-auto">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-[24px] md:text-[30px] font-bold">

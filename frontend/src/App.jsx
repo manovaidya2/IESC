@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./components/Header";
+import ScrollToTop from "./components/ScrollToTop";
 import Homepage from "./pages/Homepage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
@@ -14,6 +15,7 @@ import Contact from "./pages/Contact";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Header />
 
       <Routes>

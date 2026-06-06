@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   UserRound,
   Settings,
@@ -109,10 +110,13 @@ export default function MembershipPathway() {
               })}
             </div>
 
-            <button className="mt-8 lg:mt-12 h-[46px] w-full sm:w-[335px] font-black border-2 border-[#ff6b6b] text-[#ed1c1c] bg-transparent text-[12px] uppercase tracking-[0.4px] flex items-center justify-center gap-6 sm:gap-12">
+            <Link
+              to="/membership"
+              className="mt-8 lg:mt-12 h-[46px] w-full sm:w-[335px] font-black border-2 border-[#ff6b6b] text-[#ed1c1c] bg-transparent text-[12px] uppercase tracking-[0.4px] flex items-center justify-center gap-6 sm:gap-12"
+            >
               View All Membership Programs
               <ArrowRight size={17} />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

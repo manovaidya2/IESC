@@ -11,6 +11,12 @@ import {
 import membershipHero from "../images/memberhero.png";
 
 export default function MembershipHeroSection() {
+  const scrollToMembershipLevels = () => {
+    document
+      .getElementById("membership-levels")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   const stats = [
     {
       icon: UsersRound,
@@ -79,7 +85,11 @@ export default function MembershipHeroSection() {
               Membership Guide
             </button>
 
-            <button className="h-[42px] w-full sm:w-auto px-6 bg-black/25 border-2 border-white/45 font-semibold text-white text-[12px] font-black uppercase flex items-center justify-center gap-3">
+            <button
+              type="button"
+              onClick={scrollToMembershipLevels}
+              className="h-[42px] w-full sm:w-auto px-6 bg-black/25 border-2 border-white/45 font-semibold text-white text-[12px] font-black uppercase flex items-center justify-center gap-3"
+            >
               <GitCompare size={17} />
               Compare Memberships
             </button>

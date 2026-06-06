@@ -11,6 +11,12 @@ import {
 import standardsHero from "../images/standard.png";
 
 export default function EngineeringStandardsHero() {
+  const scrollToSection = (sectionId) => {
+    document
+      .getElementById(sectionId)
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   const stats = [
     {
       icon: FileText,
@@ -83,12 +89,20 @@ export default function EngineeringStandardsHero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="h-[46px] px-6 md:px-7 bg-[#ed1c1c] font-semibold border-2 border-[#ed1c1c] text-white text-[12px] md:text-[14px] font-black rounded-[3px] flex items-center justify-center gap-5">
+              <button
+                type="button"
+                onClick={() => scrollToSection("standards-categories")}
+                className="h-[46px] px-6 md:px-7 bg-[#ed1c1c] font-semibold border-2 border-[#ed1c1c] text-white text-[12px] md:text-[14px] font-black rounded-[3px] flex items-center justify-center gap-5"
+              >
                 Browse All Standards
                 <ArrowRight size={17} />
               </button>
 
-              <button className="h-[46px] px-6 md:px-7 bg-black/20 border-2 border-white/40 text-white text-[12px] md:text-[14px] font-semibold font-black rounded-[3px] flex items-center justify-center gap-5">
+              <button
+                type="button"
+                onClick={() => scrollToSection("standards-framework")}
+                className="h-[46px] px-6 md:px-7 bg-black/20 border-2 border-white/40 text-white text-[12px] md:text-[14px] font-semibold font-black rounded-[3px] flex items-center justify-center gap-5"
+              >
                 Standards Development Process
                 <ArrowRight size={17} />
               </button>

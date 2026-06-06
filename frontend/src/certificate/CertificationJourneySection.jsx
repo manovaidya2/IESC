@@ -82,7 +82,10 @@ export default function CertificationJourneySection() {
   ];
 
   return (
-    <section className="bg-white text-[#111] px-5 py-4">
+    <section
+      id="certification-journey"
+      className="scroll-mt-20 bg-white text-[#111] px-5 py-4"
+    >
       <div className=" mx-auto space-y-3">
         {/* Certification Journey */}
         <div className="bg-[#f7f7f6] rounded-[3px] px-7 py-7">

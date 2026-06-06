@@ -3,6 +3,12 @@ import { ChevronRight, ArrowRight } from "lucide-react";
 import assessmentHero from "../images/hero.png";
 
 export default function AssessmentHeroSection() {
+  const scrollToAssessmentProcess = () => {
+    document
+      .getElementById("assessment-process")
+      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <section
       className="relative min-h-[410px] overflow-hidden bg-cover bg-center text-white"
@@ -48,7 +54,11 @@ export default function AssessmentHeroSection() {
               <ArrowRight size={17} />
             </button>
 
-            <button className="w-full sm:w-auto h-[46px] px-7 bg-black/20 border-2 border-white/40 text-white text-[14px] font-semibold font-black rounded-[3px] flex items-center justify-center gap-2">
+            <button
+              type="button"
+              onClick={scrollToAssessmentProcess}
+              className="w-full sm:w-auto h-[46px] px-7 bg-black/20 border-2 border-white/40 text-white text-[14px] font-semibold font-black rounded-[3px] flex items-center justify-center gap-2"
+            >
               Assessment Process
               <ArrowRight size={17} />
             </button>
